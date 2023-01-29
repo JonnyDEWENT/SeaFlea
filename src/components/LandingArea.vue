@@ -2,7 +2,7 @@
 <div class="landing-area la container">
   <div class="la__logo-div">
     <img class="la__image" src="../assets/panda.jpg">
-    <h1 class="centered">Logo And Image Backdrop</h1>
+    <h1 class="centered">Logo</h1>
   </div>
 </div>
 </template>

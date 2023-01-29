@@ -20,7 +20,7 @@
 
         <template class="h__tabs" v-slot:extension>
             <v-tabs class="h__tabs" fixed-tabs>
-                <v-tab v-for="tab in tabs" :key="tab" @click="GoTo(tab.element)">{{ tab.name }}</v-tab>
+                <v-tab v-for="(tab, index) in tabs" :key="index" @click="GoTo(tab.element)">{{ tab.name }}</v-tab>
             </v-tabs>
         </template>
     
@@ -38,10 +38,9 @@
                 dense
             >
                 <v-list-item-group
-                v-model="group"
                 active-class="deep-purple--text text--accent-4"
                 >
-                <v-list-item v-for="tab in tabs" :key="tab" @click="GoTo(tab.element)">
+                <v-list-item v-for="(tab, index) in tabs" :key="index"  @click="GoTo(tab.element)">
                     <v-list-item-title>{{ tab.name }}</v-list-item-title>
                 </v-list-item>
                 </v-list-item-group>
@@ -60,10 +59,10 @@
             {'name':'The Charter', 'element': 'tc'}, 
             {'name':'The Crew', 'element': 'tcr'}, 
             {'name': 'The Boat', 'element': 'tb'}, 
-            {'name': 'Photos', 'element': 'p'}, 
-            {'name': 'Guest Info', 'element': 'gi'}, 
+            {'name': 'Photos', 'element': 'p'},  
             {'name': 'Rates', 'element': 'r'}, 
-            {'name':'Contact', 'element': 'c'}
+            {'name': 'Guest Info', 'element': 'gi'},
+            {'name':'Contact', 'element': 'c'},
         ],
         drawer: false,
     }),
