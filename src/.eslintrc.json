@@ -1,0 +1,8 @@
+{  
+    "rules": {
+      "eqeqeq": "off",
+      "no-console": "off",
+      "vue/no-useless-template-attributes": "off",
+      "no-useless-template-attributes": "off"
+    }
+  }
