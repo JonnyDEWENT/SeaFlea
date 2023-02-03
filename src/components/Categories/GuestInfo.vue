@@ -2,7 +2,7 @@
   <div class="guest-info gi">
       <image-left 
         :title="title"
-        :text="text[0]"
+        :text="text"
         :imageUrl="images[0]"
       />
   </div>

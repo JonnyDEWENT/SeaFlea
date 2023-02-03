@@ -1,8 +1,7 @@
 <template>
 <div class="landing-area la container">
   <div class="la__logo-div">
-    <img class="la__image" src="../assets/panda.jpg">
-    <h1 class="centered">Logo And Image Backdrop</h1>
+    <img class="la__title" src="../assets/seaflealogo.png">
   </div>
 </div>
 </template>
@@ -21,7 +20,8 @@
 
 <style scoped>
 .la{
-  height: 23%;
+  margin-bottom:2%;
+  margin-top:-2%;
 }
 
 .la__image{
@@ -30,18 +30,31 @@
   z-index: 10;
 }
 .la__logo-div{
- padding-bottom: 5%;
-  /* background-image: url("../assets/panda.jpg"); */
-  /* background-width */
+  background-image: url("../assets/landing-area.jpg");
   text-align: center;
-  height: 90vh;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: 100vh;
+  padding-top:10%;
+  opacity: 0.7;
+  background-position-x: center;
 } 
 
-.centered {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+.la__title {
+  min-width: 30%;
+  max-width: 80%;
+  padding: 20px;
+  margin-top:10%;
 }
+
+@media (min-width:1025px) {
+  .la__logo-div{
+    background-size: cover;
+  }
+  .la__title{
+    font-size: 5em;
+  }
+}
+
 </style>
