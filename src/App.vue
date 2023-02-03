@@ -1,8 +1,7 @@
 <template>
   <v-app>
     <header-component/>
-    <v-main>
-      <!-- <HelloWorld/> -->
+    <v-main class="app">
       <landing-area/>
       <about-us/>
       <the-charter/>
@@ -51,3 +50,9 @@ export default {
   }),
 };
 </script>
+<style scoped>
+.app{
+  max-width:100%;
+  padding-top: 0px !important;
+}
+</style>

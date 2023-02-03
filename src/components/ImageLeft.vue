@@ -3,11 +3,11 @@
   <h1>{{title}}</h1>
   <div class="il__row-div row">
     <div v-if="imageUrl" :class="switchContentSides == true ? 'ir__row-image col' : 'il__row-image col'">
-      <img :src="imageUrl">
+      <img v-bind:src="imageUrl"/>
     </div>
     <div>
       <div :class="switchContentSides ? 'ir__row-text col' : 'il__row-text col'">
-        <p>{{ text }}</p>
+        <p v-for="(p, index) in text" :key=index>{{ p }}</p>
       </div>
     </div>
   </div>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+
   export default {
     name: 'ImageLeft',
     props:{
@@ -22,6 +24,21 @@
       text: null,
       imageUrl: null,
       switchContentSides: null,
+    },
+    computed:{
+      url(){
+        var data = ref(this.imageUrl);
+        console.log(data);
+        return data.value;
+      }
+    },
+    methods: {
+      imagePath(){
+        if(this.imageUrl.includes("http")){
+          return this.imageUrl
+        }
+        return require(this.imageUrl);
+      }
     },
     data: () => ({
      images: [],

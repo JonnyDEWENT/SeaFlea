@@ -1,22 +1,11 @@
 <template>
 <div class="header h">
     <v-app-bar
+        color="white"
         app
-        color="black"
-        dark
+        class="h-bar"
         >
-        <div class="d-flex align-center">
-            <v-img
-            alt="Vuetify Logo"
-            class="shrink mr-2"
-            contain
-            src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-            transition="scale-transition"
-            width="100"
-            />
-        <br>
-        </div>
-         <v-app-bar-nav-icon class="h__nav" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+         <v-app-bar-nav-icon class="h__nav-icon" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
         <template class="h__tabs" v-slot:extension>
             <v-tabs class="h__tabs" fixed-tabs>
@@ -55,7 +44,8 @@
 
     data: () => ({
         tabs: [
-            {'name':'About Us', 'element': 'au'}, 
+            {'name':'Home', 'element': 'la'}, 
+            {'name':'Who We Are', 'element': 'au'}, 
             {'name':'The Charter', 'element': 'tc'}, 
             {'name':'The Crew', 'element': 'tcr'}, 
             {'name': 'The Boat', 'element': 'tb'}, 
@@ -68,14 +58,11 @@
     }),
     methods:{
         GoTo(elementName){
-        //     var element = document.getElementsByClassName(elementName)[0];
-        //     element.scrollIntoView({behavior: "smooth", block: "start"});
-        //     this.drawer = false;
-            const yOffset = -150; 
+            const yOffset = 0; 
             const element = document.getElementsByClassName(elementName)[0];
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
             window.scrollTo({top: y, behavior: 'smooth'});
+            this.drawer = false;
          }
     }
   }
@@ -88,22 +75,32 @@
     opacity: 80%;
     height: 100%;
 }
+.h__nav-icon{
+    padding-left:52%;
+}
 
 .h__tabs{
     display: none;
-    max-width: 75%;
-    margin-left: 12.5% !important;
+
 }
 
 @media (min-width:1025px)  { 
     .h__tabs{
         display: block;
+        max-width: 90%;
+        margin-left: 5% !important;
+    }
+    .h__nav-icon{
+        display: none;
     }
 }
 
 @media (max-width:1025px)  { 
     .h__nav{
         display: block; 
+    }
+    .h-bar{
+    height: 50px !important;
     }
 }
 </style>
