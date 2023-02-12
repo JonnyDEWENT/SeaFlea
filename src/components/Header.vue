@@ -6,6 +6,7 @@
         class="h-bar"
         >
          <v-app-bar-nav-icon class="h__nav-icon" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+         <img class="h__logo" src="../assets/seaflealogo.png">
 
         <template class="h__tabs" v-slot:extension>
             <v-tabs class="h__tabs" fixed-tabs>
@@ -47,11 +48,11 @@
             {'name':'Home', 'element': 'la'}, 
             {'name':'Who We Are', 'element': 'au'}, 
             {'name':'The Charter', 'element': 'tc'}, 
-            {'name':'The Crew', 'element': 'tcr'}, 
-            {'name': 'The Boat', 'element': 'tb'}, 
-            {'name': 'Photos', 'element': 'p'},  
-            {'name': 'Rates', 'element': 'r'}, 
+            {'name':'Meet The Crew', 'element': 'tcr'}, 
+            {'name': 'Boat', 'element': 'b'},   
+            {'name': 'Trip Rates', 'element': 'r'}, 
             {'name': 'Guest Info', 'element': 'gi'},
+            {'name': 'Brands We Trust', 'element': 'br'},
             {'name':'Contact', 'element': 'c'},
         ],
         drawer: false,
@@ -69,7 +70,9 @@
 </script>
 
 <style scoped>
-
+.h{
+    z-index: 1000;
+}
 .h__nav{
     display: none;
     opacity: 80%;
@@ -84,7 +87,7 @@
 
 }
 
-@media (min-width:1025px)  { 
+@media (min-width:1000px)  { 
     .h__tabs{
         display: block;
         max-width: 90%;
@@ -93,14 +96,24 @@
     .h__nav-icon{
         display: none;
     }
+
+    .h__logo{
+        max-width: 14%;
+        margin-left: 43%;
+        padding-top:1%;
+    }
 }
 
-@media (max-width:1025px)  { 
+@media (max-width:1000px)  { 
     .h__nav{
         display: block; 
     }
     .h-bar{
     height: 50px !important;
+    }
+
+    .h__logo{
+        display: none;
     }
 }
 </style>

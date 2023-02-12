@@ -35,7 +35,7 @@
   right: 0;
   bottom: 0;
   max-width: 100%;
-  height: 100vh;
+  height: 110vh;
   padding-top:10%;
   opacity: 0.7;
   background-position-x: center;
@@ -48,13 +48,18 @@
   margin-top:10%;
 }
 
-@media (min-width:1025px) {
+@media (min-width:1000px) {
   .la__logo-div{
     background-size: cover;
   }
   .la__title{
-    font-size: 5em;
+    display: none;
   }
+
+}
+
+@media (max-width:1000px) {
+
 }
 
 </style>

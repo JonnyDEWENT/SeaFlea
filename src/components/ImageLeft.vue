@@ -88,7 +88,7 @@ import { ref } from 'vue'
   padding: 1%;
 }
 
-@media (max-width:1025px)  { 
+@media (max-width:1000px)  { 
     .il__row-text, .il__row-image, .ir__row-text, .ir__row-image{
         width: 100%;
         margin-top: 2%;

@@ -1,19 +1,12 @@
 <template>
-  <div class="the-crew tcr">
+  <div class="brands br">
     <div class="ImageLeft il">
-      <h1 class="tcr__header">{{ title }}</h1>
+      <h1 class="br__header">{{ title }}</h1>
       <div class="il__row-div row">
-        <div
-          v-if="image"
-          :class="
-            switchContentSides == true
-              ? 'ir__row-image col'
-              : 'il__row-image col'
-          "
-        >
-          <img class="tcr__image" src="../../assets/crew1.png" />
-          <img class="tcr__image" src="../../assets/crew2.png" />
-          <img class="tcr__image" src="../../assets/crew3.png" />
+        <div class="ir__row-image col">
+          <img class="br__image" src="../../assets/seaflealogo.png" />
+          <img class="br__image" src="../../assets/seaflealogo.png" />
+          <img class="br__image" src="../../assets/seaflealogo.png" />
         </div>
       </div>
     </div>
@@ -28,31 +21,30 @@ export default {
 
   data: () => ({
     switchContentSides: true,
-    title: "MEET THE CREW",
+    title: "BRANDS WE TRUST",
     text: [],
-    image: "Brian.jpg",
   }),
 };
 </script>
 
 
 <style scoped>
-.tcr {
+.br {
   margin-top: 20%;
   padding-top: 10%;
   padding-bottom: 20%;
   align-content: center;
 }
 @media (min-width: 1000px) {
-  .tcr {
+  .br {
     margin-bottom: 20%;
     align-content: center;
   }
-  .tcr__image {
+  .br__image {
     padding-left: 10%;
     width: 30%;
   }
-  .tcr__header {
+  .br__header {
     font-size: 6em;
     text-align: center;
   }
@@ -66,18 +58,16 @@ export default {
     width: 100%;
     margin-top: 2%;
   }
-  .tcr__image {
-    width: 85vw;
+  .br__image {
+    max-width: 85vw;
     margin-left: 7.5vw;
   }
-  .tcr__header {
+  .br__header {
     font-size: 3em;
     margin-right: 8%;
-    margin-bottom: -7%;
     z-index: 1000;
     position: relative;
-    color: lightgray;
-    text-align: right;
+    text-align: center;
   }
 }
 
@@ -89,15 +79,14 @@ export default {
     width: 100%;
     margin-top: 2%;
   }
-  .tcr__image {
+  .br__image {
     max-width: 85vw;
     margin-left: 7.5vw;
   }
-  .tcr__header {
-    line-height: normal;
+  .br__header {
     font-size: 3em;
     margin-right: 8%;
-    margin-bottom: -24%;
+    margin-bottom: -22%;
     z-index: 1000;
     position: relative;
     color: lightgray;
