@@ -1,13 +1,13 @@
 <template>
   <div class="about-us au">
       <div class="ImageLeft il">
-        <div class="au__il-row-div row">
-          <div class="au__il-row-image col">
+        <div class="au__row-div row">
+          <div class="au__row-image col">
             <img class="au__image" src="../../assets/aboutus.png"/>
             <h1 class="au__header">{{title}}</h1>
           </div>
           <div>
-            <div class="au__il-row-text col">
+            <div class="au__row-text col">
               <p v-for="(p, index) in text" :key=index>{{ p }}</p>
             </div>
           </div>
@@ -50,38 +50,39 @@ export default {
 
 
 
-@media (min-width:1025px)  { 
+@media (min-width:1000px)  { 
   .au{
-    padding-top: 20%;
+    padding-top: 7%;
+    margin-top: 3%;
+    margin-bottom: 40%;
   }
   .il{
   min-height: 8%;
   /* margin-top:13%; */
   text-align: center;
-  margin-bottom: 40%;
 }
 
-.au__il-spacer{
+.au__spacer{
   min-height: 10%;;
 }
 
   .au__image{
-    max-width: 100%;
+    width: 70%;
   }
 
-.au__il-row-div{
+.au__row-div{
   padding-top: 5%;
   /* background-color:rgb(207, 178, 184); */
   text-align: center;
   height: 700px;
 }
 
-.au__il-row-image{
+.au__row-image{
  width: 50%;
  float: left;
 }
 
-.au__il-row-text{
+.au__row-text{
   width: 50%;
   padding-left: 2%;
   height: 100%;
@@ -92,8 +93,8 @@ export default {
 }
 
 .au__header{
-  margin-top: -85%;
-  color: gray;
+  margin-top: -95%;
+  color: lightgray;
   font-size: 6em;
   text-align: right;
   padding-left: 20%;
@@ -104,25 +105,60 @@ export default {
 }
 }
 
-@media (max-width:1025px)  { 
+
+@media (max-width:1000px) and (min-width: 500px)  { 
   .au{
-    margin-bottom: 100%;
+    margin-bottom: 20%;
+    margin-top: 0%;
+    font-size: 1.4em;
   }
 
   .au__image{
-    max-width: 100vw;
+    width: 100vw;
   }
-  .au__il-row-text, .au__il-row-image{
+  .au__row-text, .au__row-image{
       width: 100%;
       margin-top: 2%;
   }
-  .au__il-row-text{
+  .au__row-text{
+      padding:2%;
+      text-align: left;
+  }
+  .au__header{
+    margin-top: -7%;
+    color: lightgray;
+    font-size: 3em;
+    text-align: right;
+    padding-right:10%;
+
+  }
+  .au__list{
+  }
+  .au__footer{
+    padding:2%;
+  }
+}
+
+@media (max-width:500px)  { 
+  .au{
+    margin-bottom: 20%;
+    margin-top: 0%;
+  }
+
+  .au__image{
+    width: 100vw;
+  }
+  .au__row-text, .au__row-image{
+      width: 100%;
+      margin-top: 2%;
+  }
+  .au__row-text{
       padding:2%;
       text-align: left;
   }
   .au__header{
     margin-top: -13%;
-    color: darkgray;
+    color: lightgray;
     font-size: 3em;
     text-align: right;
     padding-right:10%;
