@@ -115,7 +115,7 @@ export default {
     width: 100%;
     padding-right: 20%;
     padding-left: 20%;
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 
   .r__row-text {
@@ -201,7 +201,7 @@ export default {
 /* Phone */
 @media (max-width: 500px) {
   .r {
-    margin-bottom: 40%;
+    margin-bottom: 10%;
   }
 
   .r__image {
@@ -215,14 +215,12 @@ export default {
     padding: 2%;
     text-align: left;
     margin-bottom: 0%;
-    background-image: url("../../assets/rates-background.png");
-    background-size: cover;
     margin-top: -10%;
     padding-top: 5%;
     width: 100%;
   }
   .r__header {
-    margin-top: -13%;
+    margin-top: -10%;
     font-size: 3em;
     text-align: right;
     padding-right: 2%;
@@ -230,6 +228,7 @@ export default {
     position: relative;
     padding-right: 10%;
     color: lightgray;
+    margin-bottom:7%;
   }
   .r__list {
     /* font-size: 0.9em; */
@@ -238,9 +237,12 @@ export default {
     padding: 2%;
   }
 
-  .r__rates,
+  .r__rates{
+    margin-bottom: 8%;
+  }
   .r__text-div {
     margin-bottom: 8%;
+    font-size: 1.2em;
   }
 
   .r__list {

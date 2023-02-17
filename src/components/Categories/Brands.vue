@@ -1,8 +1,8 @@
 <template>
   <div class="brands br">
-    <div class="ImageLeft il">
+    <div>
       <h1 class="br__header">{{ title }}</h1>
-      <div class="il__row-div row">
+      <div>
         <div class="ir__row-image col">
           <img class="br__image" src="../../assets/seaflealogo.png" />
           <img class="br__image" src="../../assets/seaflealogo.png" />
@@ -34,6 +34,8 @@ export default {
   padding-top: 10%;
   padding-bottom: 20%;
   align-content: center;
+  background-image: url("../../assets/rates-background.png");
+  background-size: cover;
 }
 @media (min-width: 1000px) {
   .br {
@@ -51,13 +53,6 @@ export default {
 }
 
 @media (max-width: 1000px) and (min-width: 500px) {
-  .il__row-text,
-  .il__row-image,
-  .ir__row-text,
-  .ir__row-image {
-    width: 100%;
-    margin-top: 2%;
-  }
   .br__image {
     max-width: 85vw;
     margin-left: 7.5vw;
@@ -72,12 +67,8 @@ export default {
 }
 
 @media (max-width: 500px) {
-  .il__row-text,
-  .il__row-image,
-  .ir__row-text,
-  .ir__row-image {
-    width: 100%;
-    margin-top: 2%;
+  .br{
+    margin-bottom: 10%;
   }
   .br__image {
     max-width: 85vw;
@@ -89,7 +80,6 @@ export default {
     margin-bottom: -22%;
     z-index: 1000;
     position: relative;
-    color: lightgray;
     text-align: right;
   }
 }

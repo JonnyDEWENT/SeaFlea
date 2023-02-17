@@ -2,13 +2,17 @@
   <div class="boat b">
     <div class="ImageLeft il">
       <div class="b__row-div row">
+        <h1 class="b__header">{{ title }}</h1>
         <div class="b__row-image col">
           <img class="b__image" src="../../assets/boat.jpg" />
-          <h1 class="b__header">{{ title }}</h1>
         </div>
+        <h1 class="b__header-mobile">{{ title }}</h1>
         <div>
           <div class="b__row-text col">
             <p v-for="(p, index) in text" :key="index">{{ p }}</p>
+            <li class="b__list" v-for="item in list" :key="item">
+              {{ item }}
+            </li>
           </div>
         </div>
       </div>
@@ -28,18 +32,28 @@ export default {
     footer:
       "The dedicated crew will work hard changing presentations and networking to make your trip one you won’t forget!",
     text: [
-      "Aboard the Sea Flea you will experience the lake in a whole new way. it is much more than a good time with friends and family. It’s a time to connect with nature and our spirit. It’s reliving a time when people had to provide for their families by using resources like the great Lake Michigan.",
-      "Welcome aboard the Sea Flea…",
-      "This fishing charter will begin with a boat ride to the fishing grounds (25-45 minutes). Captain and mate will set up rods that will be trolled at multiple depths using a variety of techniques. Our target species will be salmon and trout (chinook, coho, lake trout, steelhead, brown trout). Most trips will offer opportunities to catch multiple species. After returning to the dock the crew will clean, bag and ice your fish to finish the trip.",
-      "Most active months for Lake Michigan fish:",
+    "To provide customers with the ultimate fishing and boating experience, we have a spacious 36 ft. Tiara Open.",
+
+    "This boat is designed and built with fishing in mind. The hull design allows for the boat to sit flatter on the water in rough waves providing a more comfortable ride. The open design means it does not have a bridge which allows for a lower center of mass also reducing the amount the boat rocks.",
+
+    "This style of boat is a highly sought after charter boat. This boat is also considered a fishy boat, meaning, not all boats catch fish the same and in certain conditions some boats catch more fish.",
+
+    "This twin-engine boat is large enough to comfortably and safely accommodate 6 people plus the Sea Flea crew. The boat is insured and inspected annually by the United States Coast Guard and has the latest safety equipment. There is also a private bathroom on board.",
+
+    "To enhance our guest’s experience the boat is also outfitted with"
+,
     ],
 
     list: [
-      "Chinook (King) Salmon: May, July-September",
-      "Coho (Silver) Salmon: April-May, August-September",
-      "Steelhead (Rainbow) Trout: May-August",
-      "Lake Trout: April-August",
-      "Brown Trout: April-May",
+      "Latest fishing equipment and tackle",
+      "Electronic navigational equipment",
+      "GPS",
+      "Radar",
+      "Autopilot",
+      "Fish finders",
+      "Temperature monitor",
+      "Speed indicators",
+      "Vhf radio",
     ],
     images: [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGYYXz2QYBWPsgQ1JAD15Wcz7Ub-nYYH66dg&usqp=CAU",
@@ -72,6 +86,7 @@ export default {
 
   .b__row-div {
     padding-top: 5%;
+    padding: 10%;
     /* background-color:rgb(207, 178, 184); */
     text-align: center;
     height: 700px;
@@ -89,14 +104,20 @@ export default {
     float: right;
     text-align: left;
     padding-right: 2%;
-    font-size: 1.3em;
+    font-size: 1.1em;
+    z-index: 100;
+    position: relative;
   }
 
   .b__header {
-    margin-top: -9%;
     color: lightgray;
     font-size: 6em;
     padding-left: 20%;
+    margin-bottom: -3%;
+  }
+
+  .b__header-mobile{
+    visibility: hidden;
   }
 
   .b__footer {
@@ -124,17 +145,18 @@ export default {
     text-align: left;
   }
   .b__header {
+    visibility: hidden;
+  }
+  .b__footer {
+    padding: 2%;
+  }
+
+  .b__header-mobile{
     margin-top: -8%;
     color: lightgray;
     font-size: 3em;
     text-align: right;
     padding-right: 10%;
-  }
-  .b__list {
-    font-size: 0.9em;
-  }
-  .b__footer {
-    padding: 2%;
   }
 }
 
@@ -155,16 +177,16 @@ export default {
   .b__row-text {
     padding: 2%;
     text-align: left;
+    font-size: 1.2em;
   }
   .b__header {
-    margin-top: -13%;
+    visibility: hidden;
+  }
+  .b__header-mobile{
+    margin-top: -10%;
     color: lightgray;
     font-size: 3em;
-    text-align: right;
-    padding-right: 10%;
-  }
-  .b__list {
-    font-size: 0.9em;
+    text-align: center;
   }
   .b__footer {
     padding: 2%;

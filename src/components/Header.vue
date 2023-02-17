@@ -28,10 +28,9 @@
                 dense
             >
                 <v-list-item-group
-                active-class="deep-purple--text text--accent-4"
                 >
                 <v-list-item v-for="(tab, index) in tabs" :key="index"  @click="GoTo(tab.element)">
-                    <v-list-item-title>{{ tab.name }}</v-list-item-title>
+                    <v-list-item-title class="h__nav-item">{{ tab.name }}</v-list-item-title>
                 </v-list-item>
                 </v-list-item-group>
             </v-list>
@@ -71,7 +70,8 @@
 
 <style scoped>
 .h{
-    z-index: 1000;
+    z-index: 10000;
+    opacity: 0.8;
 }
 .h__nav{
     display: none;
@@ -109,7 +109,7 @@
         display: block; 
     }
     .h-bar{
-    height: 50px !important;
+    height: 70px !important;
     }
 
     .h__logo{

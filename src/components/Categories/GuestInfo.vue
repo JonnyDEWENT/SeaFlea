@@ -1,11 +1,11 @@
 <template>
   <div class="guest-info gi">
-    <div class="ImageLeft il">
-      <div class="gi__row-div row">
+      <h1 class="gi__header">{{ title }}</h1>
+      <div class="gi__row-div">
         <div class="gi__row-image col">
           <img class="gi__image" src="../../assets/guestinfo.jpg" />
-          <h1 class="gi__header">{{ title }}</h1>
         </div>
+        <h1 class="gi__header-mobile">{{ title }}</h1>
         <div>
           <div class="gi__required-text col">
             <p class="gi__required-text-p">
@@ -22,7 +22,6 @@
           </div>
         </div>
       </div>
-    </div>
   </div>
 </template>
 
@@ -83,8 +82,7 @@ export default {
   }
 
   .gi__row-div {
-    padding-top: 5%;
-    /* background-color:rgb(207, 178, 184); */
+    padding: 0% 10%;
     text-align: center;
     height: 700px;
   }
@@ -102,16 +100,21 @@ export default {
     float: right;
     text-align: left;
     padding-right: 2%;
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin-bottom: 1%;
+    z-index: 100;
+    position: relative;
   }
 
   .gi__header {
-    margin-top: -85%;
     color: lightgray;
     font-size: 6em;
-    text-align: right;
-    padding-left: 20%;
+    text-align: center;
+    margin-bottom: -2.5%;
+  }
+
+  .gi__header-mobile{
+    visibility: hidden;
   }
 
   .gi__footer {
@@ -141,12 +144,16 @@ export default {
     text-align: left;
     margin-bottom: 1%;
   }
-  .gi__header {
+  .gi__header-mobile {
     margin-top: -8%;
     color: lightgray;
     font-size: 3em;
     text-align: right;
     padding-right: 10%;
+  }
+
+  .gi__header{
+    visibility: hidden;
   }
   .gi__list {
     font-size: 0.9em;
@@ -177,12 +184,16 @@ export default {
     text-align: left;
     margin-bottom: 1%;
   }
-  .gi__header {
-    margin-top: -13%;
+  .gi__header-mobile {
+    margin-top: -10%;
     color: lightgray;
     font-size: 3em;
     text-align: right;
     padding-right: 10%;
+  }
+
+  .gi__header{
+    visibility: hidden;
   }
   .gi__list {
     font-size: 0.9em;

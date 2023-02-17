@@ -6,11 +6,14 @@
         <div class="tc__row-image col">
           <img class="tc__image" src="../../assets/the-charter.png" />
         </div>
+        <h1 class="tc__header-mobile">{{ title }}</h1>
         <div>
           <div class="tc__row-text col">
             <p v-for="(p, index) in text" :key="index">{{ p }}</p>
             <li class="tc__list" v-for="item in list" :key="item">
-              {{ item }}
+              <span class="tc__list-item">
+                {{ item }}
+              </span>
             </li>
           </div>
           <div class="tc__footer">
@@ -74,7 +77,7 @@ export default {
   }
 
   .tc__row-div {
-    padding-top: 5%;
+    padding: 10%;
     /* background-color:rgb(207, 178, 184); */
     text-align: center;
     height: 700px;
@@ -93,7 +96,7 @@ export default {
     text-align: left;
     padding-bottom: 1%;
     margin-top: -35%;
-    font-size: 1.3em;
+    font-size: 1.1em;
     z-index: 100;
     position: relative;
   }
@@ -101,12 +104,16 @@ export default {
   .tc__header {
     color: lightgray;
     font-size: 6em;
-    margin-bottom: -4%;
+    margin-bottom: -3%;
+  }
+
+  .tc__header-mobile{
+    visibility: hidden;
   }
 
   .tc__footer {
     margin-top: 35%;
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 }
 
@@ -151,7 +158,6 @@ export default {
 @media (max-width: 500px) {
   .tc {
     margin-bottom: 20%;
-    margin-top: 20%;
   }
 
   .tc__image {
@@ -166,21 +172,28 @@ export default {
     margin-top:5%;
     padding: 2%;
     text-align: left;
+    font-size: 1.2em;
   }
   .tc__header {
-    padding-top: 10%;
+    visibility: hidden;
+  }
+  .tc__list {
+    font-size: 0.9em;
+  }
+  .tc__list-item{
+    padding-bottom: 10px;
+  }
+  .tc__footer {
+    padding: 2%;
+  }
+  .tc__header-mobile {
+    margin-top: -10%;
     color: lightgray;
     font-size: 3em;
     text-align: right;
     padding-right: 2%;
     z-index: 100;
     position: relative;
-  }
-  .tc__list {
-    font-size: 0.9em;
-  }
-  .tc__footer {
-    padding: 2%;
   }
 }
 </style>

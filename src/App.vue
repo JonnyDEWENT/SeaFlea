@@ -11,7 +11,7 @@
       <guest-info/>
       <brands/>
       <contact/>
-
+      <bottom-bar/>
     </v-main>
   </v-app>
 </template>
@@ -28,6 +28,7 @@ import Rates from './components/Categories/Rates.vue'
 import Contact from './components/Categories/Contact.vue'
 import HeaderComponent from './components/Header.vue';
 import Brands from './components/Categories/Brands.vue'
+import BottomBar from './components/BottomBar.vue'
 
 export default {
   name: 'App',
@@ -42,7 +43,8 @@ export default {
     GuestInfo,
     Rates,
     Contact,
-    Brands
+    Brands,
+    BottomBar
   },
 
   data: () => ({
@@ -55,5 +57,6 @@ export default {
   max-width:100%;
   padding-top: 0px !important;
   font-family: sans-serif;
+  font-weight: lighter;
 }
 </style>

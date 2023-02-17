@@ -8,6 +8,9 @@
         </div>
         <div>
           <div class="c__row-text col">
+            <a class="c__directions" :href="text[9]">
+            <v-btn dark>Get Directions</v-btn>
+          </a>
             <p class="c__row-text-p">{{ text[0] }}</p>
             <p class="c__row-text-p">{{ text[1] }}</p>
             <p class="c__row-text-p">{{ text[2] }}</p>
@@ -17,10 +20,13 @@
             <p class="c__row-text-p">{{ text[5] }}</p>
             <p class="c__row-text-p">{{ text[6] }}</p>
             <br>
-            <p class="c__row-text-p">{{ text[7] }}</p>
-            <p class="c__row-text-p">{{ text[8] }}</p>
+            <a class="c__call-link" href="tel:6168861306"> 
+              <v-btn color="success">Call (616) 886-1306</v-btn> 
+            </a>
             <br>
-            <a class="c__row-text-p" :href="text[9]">{{ text[9] }}</a>
+            <a class="c__email" href="mailto: seafleacharters@gmail.com">
+              <v-btn color="primary">Send Us an Email</v-btn> 
+            </a>
           </div>
         </div>
       </div>
@@ -73,6 +79,19 @@ export default {
     margin-bottom: 0px;
   }
 
+  .c__directions{
+    text-decoration: none;
+    margin-bottom: 10%;
+  }
+
+  .c__email{
+    text-decoration: none;
+  }
+  .c__call-link{
+    text-decoration: none;
+    margin-bottom: 5%;
+  }
+
 @media (min-width: 1000px) {
   .c {
     padding-top: 7%;
@@ -113,7 +132,7 @@ export default {
     float: right;
     text-align: left;
     padding-right: 2%;
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin-bottom: 0px;
   }
 
@@ -149,7 +168,7 @@ export default {
   }
   .c__row-text {
     padding: 2%;
-    text-align: left;
+    text-align: center;
   }
   .c__header {
     margin-top: -8%;
@@ -180,20 +199,36 @@ export default {
   }
   .c__row-text {
     padding: 2%;
-    text-align: left;
+    text-align: center;
+    align-content: center;
   }
   .c__header {
-    margin-top: -13%;
+    margin-top: -10%;
     color: lightgray;
     font-size: 3em;
-    text-align: right;
-    padding-right: 10%;
+    text-align: center;
+    margin-bottom: 5%;
   }
   .c__list {
     font-size: 0.9em;
   }
   .c__footer {
     padding: 2%;
+  }
+
+  .c__directions{
+    display:flex;
+    justify-content: center;
+  }
+
+  .c__email{
+    display:flex;
+    justify-content: center;
+  }
+
+  .c__call-link{
+    display:flex;
+    justify-content: center;
   }
 }
 </style>
