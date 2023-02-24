@@ -1,7 +1,8 @@
 <template>
   <div class="the-crew tcr">
+    <h1 class="tcr__header">{{ title }}</h1>
     <img class="tcr__head-image" src="../../assets/crew.jpg" />
-      <h1 class="tcr__header">{{ title }}</h1>
+      <h1 class="tcr__header-mobile">{{ title }}</h1>
       <div class="tcr__row-div row">
         <img class="tcr__image" src="../../assets/crew1.jpg" />
         <h3 class="tcr__image-caption">Captain Brian Butts</h3>
@@ -39,22 +40,50 @@ export default {
 
 @media (min-width: 1000px) {
   .tcr {
+    padding-top: 13%;
     margin-bottom: 20%;
     align-content: center;
   }
 
   .tcr__image {
-    padding-left: 10%;
-    width: 30%;
+    width: 40vw;
+    margin-left:30vw;
+    margin-bottom: 20px;
+  }
+
+  .tcr__head-image{
+    width: 40vw;
+    margin-left:30vw;
+    margin-bottom: 2%;
+  }
+
+  .tcr__header-mobile {
+    display: none;
   }
 
   .tcr__header {
-    font-size: 6em;
+    margin-bottom: -3%;
+    font-size: 5em;
     text-align: center;
+    z-index: 100;
+    position: relative;
+    color: lightgray;
   }
 
   .tcr__row-div {
-    padding: 10%;
+   
+  }
+
+  .tcr__image-caption {
+    margin-left:30.5vw;
+    color: white;
+    padding-left: 2%;
+    margin-top: -70px;
+    margin-bottom: 2%;
+    width:15%;
+    background-color: black;
+    z-index: 1000;
+    position: relative;
   }
 }
 
@@ -73,7 +102,7 @@ export default {
     margin-left: 7.5vw;
   }
 
-  .tcr__header {
+  .tcr__header-mobile {
     font-size: 3em;
     margin-right: 8%;
     margin-bottom: -7%;
@@ -81,6 +110,10 @@ export default {
     position: relative;
     color: lightgray;
     text-align: right;
+  }
+
+  .tcr__header {
+    display: none;
   }
 }
 
@@ -90,10 +123,10 @@ export default {
     max-width: 100vw;
   }
 
-  .tcr__header {
+  .tcr__header-mobile {
     line-height: normal;
-    font-size: 3em;
-    margin-top: -10%;
+    font-size: 2.5em;
+    margin-top: -6%;
     z-index: 1000;
     position: relative;
     color: lightgray;
@@ -102,15 +135,21 @@ export default {
 
   .tcr__image-caption {
     color: white;
-    font-size: 1.5em;
-    margin-left: 2.5%;
+    font-size: 0.9em;
     padding-left: 2%;
     margin-top: -10%;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
+    background-color:black;
+    z-index: 100;
+    position: relative;
   }
   
   .tcr__head-image{
     max-width: 100vw;
+  }
+
+  .tcr__header {
+    display: none;
   }
 }
 </style>

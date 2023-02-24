@@ -1,33 +1,32 @@
 <template>
   <div class="contact c">
-    <div class="ImageLeft il">
-      <div class="c__row-div row">
-        <div class="c__row-image col">
-          <img class="c__image" src="../../assets/location.png" />
-          <h1 class="c__header">{{ title }}</h1>
-        </div>
-        <div>
-          <div class="c__row-text col">
-            <a class="c__directions" :href="text[9]">
-            <v-btn dark>Get Directions</v-btn>
+    <div class="c__row-div row">
+      <h1 class="c__header">{{ title }}</h1>
+      <div class="c__row-image col">
+        <img class="c__image" src="../../assets/location.png" />
+        <h1 class="c__header-mobile">{{ title }}</h1>
+      </div>
+      <div>
+        <div class="c__row-text col">
+          <a class="c__directions" :href="text[9]">
+            <v-btn class="c__directions-button" dark>Get Directions</v-btn>
           </a>
-            <p class="c__row-text-p">{{ text[0] }}</p>
-            <p class="c__row-text-p">{{ text[1] }}</p>
-            <p class="c__row-text-p">{{ text[2] }}</p>
-            <p class="c__row-text-p">{{ text[3] }}</p>
-            <br>
-            <p class="c__row-text-p">{{ text[4] }}</p>
-            <p class="c__row-text-p">{{ text[5] }}</p>
-            <p class="c__row-text-p">{{ text[6] }}</p>
-            <br>
-            <a class="c__call-link" href="tel:6168861306"> 
-              <v-btn color="success">Call (616) 886-1306</v-btn> 
-            </a>
-            <br>
-            <a class="c__email" href="mailto: seafleacharters@gmail.com">
-              <v-btn color="primary">Send Us an Email</v-btn> 
-            </a>
-          </div>
+          <p class="c__row-text-p">{{ text[0] }}</p>
+          <p class="c__row-text-p">{{ text[1] }}</p>
+          <p class="c__row-text-p">{{ text[2] }}</p>
+          <p class="c__row-text-p">{{ text[3] }}</p>
+          <br>
+          <p class="c__row-text-p">{{ text[4] }}</p>
+          <p class="c__row-text-p">{{ text[5] }}</p>
+          <p class="c__row-text-p">{{ text[6] }}</p>
+          <br>
+          <a class="c__call-link" href="tel:6168861306">
+            <v-btn class="c__call-button" color="success">Call (616) 886-1306</v-btn>
+          </a>
+          <br>
+          <a class="c__email" href="mailto: seafleacharters@gmail.com">
+            <v-btn class="c__email-button" color="primary">Send Us an Email</v-btn>
+          </a>
         </div>
       </div>
     </div>
@@ -74,34 +73,29 @@ export default {
 
 
 <style scoped>
+.c__row-text-p {
+  margin-bottom: 0px;
+}
 
-  .c__row-text-p{
-    margin-bottom: 0px;
-  }
+.c__directions {
+  text-decoration: none;
+  margin-bottom: 10%;
+}
 
-  .c__directions{
-    text-decoration: none;
-    margin-bottom: 10%;
-  }
+.c__email {
+  text-decoration: none;
+}
 
-  .c__email{
-    text-decoration: none;
-  }
-  .c__call-link{
-    text-decoration: none;
-    margin-bottom: 5%;
-  }
+.c__call-link {
+  text-decoration: none;
+  margin-bottom: 5%;
+}
 
 @media (min-width: 1000px) {
   .c {
-    padding-top: 7%;
+    padding-top: 10%;
     margin-top: 3%;
     margin-bottom: 20%;
-  }
-  .il {
-    min-height: 8%;
-    /* margin-top:13%; */
-    text-align: center;
   }
 
   .c__spacer {
@@ -109,7 +103,7 @@ export default {
   }
 
   .c__image {
-    width: 75%;
+    width: 100%;
   }
 
   .c__row-div {
@@ -120,32 +114,54 @@ export default {
   }
 
   .c__row-image {
-    width: 60%;
-    padding-left: 10%;
+    width: 50%;
+    padding-left: 15%;
     float: left;
   }
 
   .c__row-text {
-    width: 40%;
-    padding-left: 2%;
+    width: 30%;
     height: 100%;
     float: right;
-    text-align: left;
-    padding-right: 2%;
-    font-size: 1.1em;
+    text-align: center;
+    margin-right: 20%;
+    font-size: 0.9em;
     margin-bottom: 0px;
+    margin-top: 7vh;
+
   }
 
   .c__header {
-    margin-top: -75%;
+    font-size: 5em;
+    text-align: center;
+    margin-bottom: -4%;
     color: lightgray;
-    font-size: 6em;
-    text-align: right;
-    padding-left: 20%;
+    padding-left: 10%;
+  }
+
+  .c__header-mobile {
+    visibility: hidden;
   }
 
   .c__footer {
     margin-top: 35%;
+  }
+
+  .c__directions-button {
+    text-decoration: none;
+    margin-bottom: 10%;
+    width: 50%;
+  }
+
+  .c__email-button {
+    text-decoration: none;
+    width: 50%;
+  }
+
+  .c__call-button {
+    text-decoration: none;
+    margin-bottom: 5%;
+    width: 50%;
   }
 }
 
@@ -160,23 +176,31 @@ export default {
   .c__image {
     width: 100vw;
   }
+
   .c__row-text,
   .c__row-image {
     max-width: 100%;
     margin-top: 2%;
     align-content: center;
   }
+
   .c__row-text {
     padding: 2%;
     text-align: center;
   }
-  .c__header {
+
+  .c__header-mobile {
     margin-top: -8%;
     color: lightgray;
     font-size: 3em;
     text-align: right;
     padding-right: 10%;
   }
+
+  .c__header {
+    display: none;
+  }
+
   .c__footer {
     padding: 2%;
   }
@@ -191,43 +215,49 @@ export default {
   .c__image {
     width: 100vw;
   }
+
   .c__row-text,
   .c__row-image {
     max-width: 100%;
     margin-top: 2%;
     align-content: center;
+    font-size: 0.9em;
   }
+
   .c__row-text {
     padding: 2%;
     text-align: center;
     align-content: center;
   }
-  .c__header {
-    margin-top: -10%;
+
+  .c__header-mobile {
+    margin-top: -8%;
     color: lightgray;
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
     margin-bottom: 5%;
   }
-  .c__list {
-    font-size: 0.9em;
+
+  .c__header {
+    display: none;
   }
+
   .c__footer {
     padding: 2%;
   }
 
-  .c__directions{
-    display:flex;
+  .c__directions {
+    display: flex;
     justify-content: center;
   }
 
-  .c__email{
-    display:flex;
+  .c__email {
+    display: flex;
     justify-content: center;
   }
 
-  .c__call-link{
-    display:flex;
+  .c__call-link {
+    display: flex;
     justify-content: center;
   }
 }

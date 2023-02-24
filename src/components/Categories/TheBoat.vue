@@ -40,7 +40,7 @@ export default {
 
     "This twin-engine boat is large enough to comfortably and safely accommodate 6 people plus the Sea Flea crew. The boat is insured and inspected annually by the United States Coast Guard and has the latest safety equipment. There is also a private bathroom on board.",
 
-    "To enhance our guest’s experience the boat is also outfitted with"
+    "To enhance our guest’s experience the boat is also outfitted with:"
 ,
     ],
 
@@ -66,18 +66,9 @@ export default {
 <style scoped>
 @media (min-width: 1000px) {
   .b {
-    padding-top: 7%;
+    padding-top: 4%;
     margin-top: 3%;
-  }
-  .il {
-    min-height: 8%;
-    /* margin-top:13%; */
-    text-align: center;
     margin-bottom: 40%;
-  }
-
-  .b__spacer {
-    min-height: 10%;
   }
 
   .b__image {
@@ -93,31 +84,31 @@ export default {
   }
 
   .b__row-image {
-    width: 60%;
+    width: 50%;
     float: left;
   }
 
   .b__row-text {
-    width: 40%;
+    width: 50%;
     padding-left: 2%;
     height: 100%;
-    float: right;
+    float: left;
     text-align: left;
     padding-right: 2%;
-    font-size: 1.1em;
     z-index: 100;
     position: relative;
+    margin-top: 7Vh;
   }
 
   .b__header {
+    font-size: 5em;
     color: lightgray;
-    font-size: 6em;
-    padding-left: 20%;
-    margin-bottom: -3%;
+    margin-bottom: -5%;
+    padding-left: 15%;
   }
 
   .b__header-mobile{
-    visibility: hidden;
+    display: none;
   }
 
   .b__footer {
@@ -177,15 +168,15 @@ export default {
   .b__row-text {
     padding: 2%;
     text-align: left;
-    font-size: 1.2em;
+    font-size: 0.9em;
   }
   .b__header {
     visibility: hidden;
   }
   .b__header-mobile{
-    margin-top: -10%;
+    margin-top: -8%;
     color: lightgray;
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
   }
   .b__footer {

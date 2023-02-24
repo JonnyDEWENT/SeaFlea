@@ -1,17 +1,18 @@
 <template>
   <v-app>
-    <header-component/>
+    <header-component />
+    <header-mobile />
     <v-main class="app">
-      <landing-area/>
-      <about-us/>
-      <the-charter/>
-      <the-crew/>
-      <the-boat/>
-      <rates/>
-      <guest-info/>
-      <brands/>
-      <contact/>
-      <bottom-bar/>
+      <landing-area />
+      <about-us />
+      <the-charter />
+      <the-crew />
+      <the-boat />
+      <rates />
+      <guest-info />
+      <brands />
+      <contact />
+      <bottom-bar />
     </v-main>
   </v-app>
 </template>
@@ -29,6 +30,7 @@ import Contact from './components/Categories/Contact.vue'
 import HeaderComponent from './components/Header.vue';
 import Brands from './components/Categories/Brands.vue'
 import BottomBar from './components/BottomBar.vue'
+import HeaderMobile from './components/HeaderMobile.vue'
 
 export default {
   name: 'App',
@@ -44,19 +46,33 @@ export default {
     Rates,
     Contact,
     Brands,
-    BottomBar
+    BottomBar,
+    HeaderMobile
   },
 
   data: () => ({
-    images:["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGYYXz2QYBWPsgQ1JAD15Wcz7Ub-nYYH66dg&usqp=CAU"],
+    images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGYYXz2QYBWPsgQ1JAD15Wcz7Ub-nYYH66dg&usqp=CAU"],
   }),
+
 };
 </script>
+
 <style scoped>
-.app{
-  max-width:100%;
+.app {
+  max-width: 100%;
   padding-top: 0px !important;
-  font-family: sans-serif;
-  font-weight: lighter;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+
+@media (min-width: 1000px) {
+  .app {
+    /* background: url("./assets/rates-background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+  }
 }
 </style>

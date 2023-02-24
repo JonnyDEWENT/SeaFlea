@@ -1,32 +1,23 @@
 <template>
-    <div class="header h">
-        <div class="h__top">
-            <div class="row">
-                <img class="h__logo" src="../assets/seaflealogo.png">
-                <a class="c__email" href="mailto: seafleacharters@gmail.com">
-                    <v-btn dark class="h__button">
-                        Email: seafleacharters@gmail.com
-                    </v-btn>
-                </a>
-                <a class="bb__call-link" href="tel:6168861306">
-                    <v-btn dark class="h__button">
-                        <v-icon color="orange" class="bb__icon">mdi-phone</v-icon>
-                        Call (616) 886-1306
-                    </v-btn>
-                </a>
-            </div>
-        </div>
-        <v-card dark class="h-bar">
-            <v-tabs class="h__tabs" bg-color="primary">
-                <v-tab :class="[index !== tabs.length - 1 ? 'h__tab' : '']" v-for="(tab, index) in tabs" :key="index"
-                    @click="GoTo(tab.element)">{{
+    <div class="header hm">
+        <v-app-bar light app class="h-bar">
+            <v-app-bar-nav-icon class="h__nav-icon" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+            <img class="h__logo" src="../assets/seaflealogo.png">
+            <v-btn class="h__button">
+                <v-icon class="bb__icon">mdi-phone</v-icon>
+                Call (616) 886-1306
+            </v-btn>
+
+            <template class="h__tabs" v-slot:extension>
+                <v-tabs class="h__tabs">
+                    <v-tab :class="[index !== tabs.length -1 ? 'h__tab' : '']" v-for="(tab, index) in tabs" :key="index" @click="GoTo(tab.element)">{{
                         tab.name
                     }}</v-tab>
-            </v-tabs>
+                </v-tabs>
+            </template>
 
 
-
-        </v-card>
+        </v-app-bar>
         <v-navigation-drawer v-model="drawer" temporary app floating class="h__nav">
             <v-list nav dense>
                 <v-list-item-group>
@@ -41,11 +32,12 @@
 
 <script>
 export default {
-    name: 'HeaderComponent',
+    name: 'HeaderMobile',
 
     data: () => ({
         tabs: [
             { 'name': 'Home', 'element': 'la' },
+            { 'name': 'Who We Are', 'element': 'au' },
             { 'name': 'The Charter', 'element': 'tc' },
             { 'name': 'Meet The Crew', 'element': 'tcr' },
             { 'name': 'Boat', 'element': 'b' },
@@ -69,7 +61,7 @@ export default {
 </script>
 
 <style scoped>
-.h {
+.hm {
     z-index: 10000;
     opacity: 0.8;
 }
@@ -89,17 +81,18 @@ export default {
 }
 
 @media (min-width:1000px) {
+    .hm{
+        display: none;
+    }
     .h__tabs {
         display: flex;
         max-width: 90%;
         margin-left: 5% !important;
         color: black;
         justify-content: center;
-        padding-top: 40px;
-        /* height: 75px; */
-    }
 
-    .v-toolbar__content {
+    }
+    .v-toolbar__content{
         background-color: rgb(210, 210, 126) !important;
     }
 
@@ -115,39 +108,37 @@ export default {
 
     .h__logo {
         max-width: 14%;
-        padding-top: 0%;
+        padding-top: 2%;
         filter: brightness(120%);
         filter: contrast(120%);
         filter: drop-shadow(5px 5px 5px black);
-        z-index: 1000;
-        position: relative;
     }
 
-    .h__button {
-        margin-top: 1%;
-        margin-right: 2%;
-        float: right;
+    .h__button{
+        margin-left: 65%;
     }
 
-    .h {
-        opacity: 1;
-        position: fixed;
-        margin-bottom:300px;
+    .hm {
+        opacity: 0.9;
     }
-
-    .h-bar {
-        height: 100px;
-    }
-
-    .h__top {
-        height: 70px;
-        width: 100vw;
-        background-color: rgb(210, 210, 126);
+    .h-bar{
+        
     }
 }
 
 @media (max-width:1000px) {
-    .h {
+    .h__nav {
+        display: block;
+    }
+
+    .h-bar {
+        height: 70px !important;
+    }
+
+    .h__logo {
+        display: none;
+    }
+    .h__button{
         display: none;
     }
 }

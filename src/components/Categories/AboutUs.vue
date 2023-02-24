@@ -32,14 +32,6 @@ export default {
     text: ["If you've got 'THE ITCH' to fish on Lake Michigan, then Sea Flea Fishing Charters has the cure. ",
     "Here at Sea Flea Fishing Charters, it is our mission to provide an unforgettable experience for all our guests.",
     "We want to be your go-to fishing charter. With access to Lake Michigan's world-class fishery, Sea Flea Fishing Charters offers the ultimate salmon and trout charter fishing experience for guest of all ages. Not only do we want to provide you the opportunity to catch a fish of a lifetime or catch your first fish, we want to build relationships for a lifetime. We want to get to know our guest and be apart of your unforgettable moments. Come have fun, enjoy the great outdoors and let us show you what makes Sea Flea Charters so unique among the charter fishing industry."],
-
-    list: [
-    "Chinook (King) Salmon: May, July-September",
-    "Coho (Silver) Salmon: April-May, August-September",
-    "Steelhead (Rainbow) Trout: May-August",
-    "Lake Trout: April-August",
-    "Brown Trout: April-May"
-    ],
     images:["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGYYXz2QYBWPsgQ1JAD15Wcz7Ub-nYYH66dg&usqp=CAU"],
   }),
 };
@@ -53,8 +45,10 @@ export default {
 @media (min-width:1000px)  { 
   .au{
     padding-top: 7%;
-    margin-top: 3%;
-    margin-bottom: 40%;
+    margin-top: 20%;
+    display: none;
+    /* margin-bottom: 40%; */
+    /* display: none; */
   }
 
   .au__spacer{
@@ -84,16 +78,15 @@ export default {
     float:right;
     text-align: left;
     padding-right: 2%;
-    font-size: 1.1em;
     z-index: 100;
     position: relative;
   }
 
   .au__header{
-    color: lightgray;
     font-size: 6em;
     text-align: center;
-    margin-bottom: -4%;
+    margin-bottom: -5%;
+    color:lightgray;
   }
 
   .au__footer{
@@ -101,7 +94,7 @@ export default {
   }
 
   .au__header-mobile{
-    visibility: hidden;
+    display: none;
   }
 }
 
@@ -124,12 +117,15 @@ export default {
       padding:2%;
       text-align: left;
   }
-  .au__header{
+  .au__header-mobile{
     margin-top: -7%;
     color: lightgray;
     font-size: 3em;
     text-align: right;
     padding-right:10%;
+  }
+  .au__header{
+    display: none;
   }
   .au__list{
   }
@@ -141,7 +137,7 @@ export default {
 @media (max-width:500px)  { 
   .au{
     margin-bottom: 10%;
-    margin-top: -30%;
+    margin-top: -10%;
   }
 
   .au__image{
@@ -154,14 +150,13 @@ export default {
   .au__row-text{
       padding:2%;
       text-align: left;
-      font-size: 1.2em;
+      font-size: 0.9em;
   }
   .au__header-mobile{
     color: lightgray;
-    font-size: 3em;
-    text-align: right;
-    padding-right:10%;
-    margin-top: -10%;
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: -8%;
   }
   .au__header{
     visibility: hidden;

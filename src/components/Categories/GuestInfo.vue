@@ -1,27 +1,29 @@
 <template>
   <div class="guest-info gi">
-      <h1 class="gi__header">{{ title }}</h1>
-      <div class="gi__row-div">
-        <div class="gi__row-image col">
-          <img class="gi__image" src="../../assets/guestinfo.jpg" />
-        </div>
-        <h1 class="gi__header-mobile">{{ title }}</h1>
-        <div>
+    <h1 class="gi__header">{{ title }}</h1>
+    <div class="gi__row-div">
+      <div class="gi__row-image col">
+        <img class="gi__image" src="../../assets/guestinfo.jpg" />
+      </div>
+      <h1 class="gi__header-mobile">{{ title }}</h1>
+      <div class="gi__text-div">
           <div class="gi__required-text col">
-            <p class="gi__required-text-p">
-              <strong>{{ required[0] }}</strong>
-            </p>
+            <h4>Required</h4>
             <p class="gi__required-text-p">{{ required[1] }}</p>
-            <p class="gi__required-text-p">{{ required[2] }}</p>
+            <a class="gi__license" href="https://www.mdnr-elicense.com/">
+              <v-btn color="primary">Buy E-License</v-btn>
+            </a>
           </div>
           <div class="gi__additional-text col">
-            <div v-for="(note, index) in additional" :key="index">
-              <strong v-if="index === 0">{{ note }}</strong>
-              <p class="gi__additional-text-p" v-else>{{ note }}</p>
-            </div>
+            <h4>Additional Information</h4>
+            <ul>
+              <li v-for="(note, index) in additional" :key="index">
+                <p class="gi__additional-text-p">{{ note }}</p>
+              </li>
+            </ul>
           </div>
-        </div>
       </div>
+    </div>
   </div>
 </template>
 
@@ -43,7 +45,6 @@ export default {
     ],
 
     additional: [
-      "ADDITIONAL INFO:",
       "Please wear soft-soled shoes",
       "Clothing appropriate for weather conditions (temperatures on the lake are normally 10 degrees colder)",
       "Food and beverages (preferably in small coolers)",
@@ -61,20 +62,15 @@ export default {
 .gi__additional-text-p {
   margin-bottom: 0px;
 }
+
+.gi__license {
+  text-decoration: none;
+}
+
 @media (min-width: 1000px) {
   .gi {
-    padding-top: 7%;
+    padding-top: 13%;
     margin-top: 3%;
-    margin-bottom: 40%;
-  }
-  .il {
-    min-height: 8%;
-    /* margin-top:13%; */
-    text-align: center;
-  }
-
-  .gi__spacer {
-    min-height: 10%;
   }
 
   .gi__image {
@@ -90,6 +86,7 @@ export default {
   .gi__row-image {
     width: 50%;
     float: left;
+    margin-top: -7vh;
   }
 
   .gi__required-text,
@@ -100,25 +97,29 @@ export default {
     float: right;
     text-align: left;
     padding-right: 2%;
-    font-size: 1.1em;
     margin-bottom: 1%;
     z-index: 100;
     position: relative;
   }
 
   .gi__header {
-    color: lightgray;
-    font-size: 6em;
+    font-size: 5em;
     text-align: center;
-    margin-bottom: -2.5%;
+    padding-left: 15%;
+    margin-bottom: -4%;
+    color: lightgray;
   }
 
-  .gi__header-mobile{
-    visibility: hidden;
+  .gi__header-mobile {
+    display: none;
   }
 
   .gi__footer {
     margin-top: 35%;
+  }
+
+  .gi__text-div{
+    margin-top: 7vh;
   }
 }
 
@@ -132,18 +133,21 @@ export default {
   .gi__image {
     width: 100vw;
   }
+
   .gi__required-text,
   .gi__additional-text,
   .gi__row-image {
     width: 100%;
     margin-top: 2%;
   }
+
   .gi__required-text,
   .gi__additional-text {
     padding: 2%;
     text-align: left;
     margin-bottom: 1%;
   }
+
   .gi__header-mobile {
     margin-top: -8%;
     color: lightgray;
@@ -152,12 +156,14 @@ export default {
     padding-right: 10%;
   }
 
-  .gi__header{
+  .gi__header {
     visibility: hidden;
   }
+
   .gi__list {
     font-size: 0.9em;
   }
+
   .gi__footer {
     padding: 2%;
   }
@@ -172,32 +178,37 @@ export default {
   .gi__image {
     width: 100vw;
   }
+
   .gi__required-text,
   .gi__additional-text,
   .gi__row-image {
     width: 100%;
     margin-top: 2%;
   }
+
   .gi__required-text,
   .gi__additional-text {
     padding: 2%;
     text-align: left;
     margin-bottom: 1%;
-  }
-  .gi__header-mobile {
-    margin-top: -10%;
-    color: lightgray;
-    font-size: 3em;
-    text-align: right;
-    padding-right: 10%;
+    font-size: 0.9em;
   }
 
-  .gi__header{
+  .gi__header-mobile {
+    margin-top: -8%;
+    color: lightgray;
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .gi__header {
     visibility: hidden;
   }
+
   .gi__list {
     font-size: 0.9em;
   }
+
   .gi__footer {
     padding: 2%;
   }
