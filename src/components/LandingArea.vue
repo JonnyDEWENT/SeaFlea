@@ -3,7 +3,7 @@
     <img class="la__image" src="../assets/Home.jpg">
     <div class="la__logo-div">
       <img class="la__title-logo" src="../assets/seaflealogo.png">
-      <h1 class="la__title">Grand Haven Charter Fishing</h1>
+      <h3 class="la__title">Grand Haven Charter Fishing</h3>
       <h5 class="la__subtitle">Chinook Pier Sportfishing | Grand Haven, Michigan</h5>
       <div class="la__text-div">
         <h5 class="la__subtitle-desktop">Chinook Pier Sportfishing | Grand Haven, Michigan</h5>
