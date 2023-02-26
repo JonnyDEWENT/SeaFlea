@@ -13,6 +13,7 @@
       <brands />
       <contact />
       <bottom-bar />
+      <Footer />
     </v-main>
   </v-app>
 </template>
@@ -31,6 +32,7 @@ import HeaderComponent from './components/Header.vue';
 import Brands from './components/Categories/Brands.vue'
 import BottomBar from './components/BottomBar.vue'
 import HeaderMobile from './components/HeaderMobile.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
@@ -47,7 +49,8 @@ export default {
     Contact,
     Brands,
     BottomBar,
-    HeaderMobile
+    HeaderMobile,
+    Footer
   },
 
   data: () => ({
@@ -62,7 +65,7 @@ export default {
   max-width: 100%;
   padding-top: 0px !important;
   font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.1em;
 }
 

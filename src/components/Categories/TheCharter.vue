@@ -1,5 +1,5 @@
 <template>
-  <div class="the-charter tc">
+  <div id="tc" class="the-charter tc">
     <div class="ImageLeft">
       <div class="tc__row-div row">
         <h1 class="tc__header">{{ title }}</h1>
@@ -56,6 +56,14 @@ export default {
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGYYXz2QYBWPsgQ1JAD15Wcz7Ub-nYYH66dg&usqp=CAU",
     ],
   }),
+  created(){
+    var el = document.getElementById("tc");
+    document.addEventListener("visibilityChange", () => {
+      if(el.visibilityState == "visible"){
+        console.log("hello")
+      }
+    })
+  }
 };
 </script>
 
@@ -115,7 +123,9 @@ export default {
 
   .tc__footer {
     margin-top: 35%;
-    font-size: 0.9em;
+    width: 50%;
+    text-align: left;
+    font-size: 1em;
   }
 }
 

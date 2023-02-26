@@ -56,6 +56,23 @@ export default {
         ],
         drawer: false,
     }),
+    mounted() {
+        // var self = this;
+        // document.addEventListener('scroll', function () {
+        //     try {
+        //         self.tabs.forEach(x => {
+        //             if (self.isInViewport(document.querySelector("." + x.element))) {
+        //                 document.title = "Sea Flea Charters | " + x.name;
+        //                 return;
+        //             }
+        //         });
+        //     }
+        //     catch {
+        //         console.error("failed to set title");
+        //     }
+        // });
+
+    },
     methods: {
         GoTo(elementName) {
             const yOffset = 0;
@@ -63,6 +80,15 @@ export default {
             const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
             window.scrollTo({ top: y, behavior: 'smooth' });
             this.drawer = false;
+        },
+
+        isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.left >= 0 &&
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
         }
     }
 }
@@ -132,7 +158,7 @@ export default {
     .h {
         opacity: 1;
         position: fixed;
-        margin-bottom:300px;
+        margin-bottom: 300px;
     }
 
     .h-bar {
