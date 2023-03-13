@@ -53,7 +53,7 @@ export default {
   .br {
     margin-bottom: 40%;
     align-content: center;
-    margin-top: 4%;
+    margin-top: 0%;
     padding-top: 13%;
     /* background-image: url("../../assets/rates-background.png"); */
   }
@@ -90,18 +90,21 @@ export default {
 @media (max-width: 1000px) and (min-width: 500px) {
 
   .br{
-    
+    padding: 5%;
   }
   .br__image {
-    max-width: 100vw;
+    width: 100%;
+    padding: 0% 10%;
   }
 
   .br__header-mobile {
     font-size: 3em;
     margin-right: 8%;
+    margin-top: -5%;
     z-index: 1000;
     position: relative;
-    text-align: center;
+    text-align: right;
+    color: lightgray;
   }
   .br__header{
     display: none;

@@ -1,8 +1,10 @@
 <template>
   <div class="landing-area la container">
-    <img class="la__image" src="../assets/Home.jpg">
     <div class="la__logo-div">
+      <div class="la__image-div">
+      <img class="la__image" src="../assets/Home.jpg">
       <img class="la__title-logo" src="../assets/seaflealogo.png">
+      </div>
       <h3 class="la__title">Grand Haven Charter Fishing</h3>
       <h5 class="la__subtitle">Chinook Pier Sportfishing | Grand Haven, Michigan</h5>
       <div class="la__text-div">
@@ -22,9 +24,9 @@ export default {
   data: () => ({
     images: [],
     headers: [],
-     text: ["If you've got 'THE ITCH' to fish on Lake Michigan, then Sea Flea Fishing Charters has the cure. ",
-    "Here at Sea Flea Fishing Charters, it is our mission to provide an unforgettable experience for all our guests.",
-    "We want to be your go-to fishing charter. With access to Lake Michigan's world-class fishery, Sea Flea Fishing Charters offers the ultimate salmon and trout charter fishing experience for guest of all ages. Not only do we want to provide you the opportunity to catch a fish of a lifetime or catch your first fish, we want to build relationships for a lifetime. We want to get to know our guest and be apart of your unforgettable moments. Come have fun, enjoy the great outdoors and let us show you what makes Sea Flea Charters so unique among the charter fishing industry."],
+    text: ["If you've got 'THE ITCH' to fish on Lake Michigan, then Sea Flea Fishing Charters has the cure. ",
+    "The value of a fishing experience is measured by the lasting memories it creates. Here at Sea Flea Charters, it’s our mission to provide you the best experience by creating memories you’ll never forget.",
+    "We want to be your go-to fishing charter. With access to Lake Michigan's world-class fishery, Sea Flea Charters offers the ultimate salmon and trout fishing experience. Not only do we want to provide you with the opportunity to catch the fish of a lifetime, we want to build a lasting relationship. We want to get to know you and be a part of your fondest fishing memories. Come have fun enjoying the great outdoors and let us show you what makes Sea Flea Charters the best salmon and trout fishing charter on Lake Michigan."],
     
   }),
 }
@@ -49,7 +51,7 @@ export default {
   text-align: center;
   right: 0;
   bottom: 0;
-  padding-top: 10%;
+  padding-top: 8%;
 }
 
 .la__title-logo {
@@ -67,6 +69,7 @@ export default {
     height: 100vh;
     background-size: 50%;
     text-align: center;
+    margin-top: -100px;
     background: linear-gradient(to top left, #fff 30%, #fff 60%, rgb(210, 210, 126) 50%, rgb(210, 210, 126)  60%);
   }
 
@@ -75,28 +78,29 @@ export default {
   }
 
   .la__image {
-    height: 80vh;
+    /* height: 80vh; */
     margin-top: 139px;
     z-index: 10;
     float: left;
-    margin: 10%;
-    margin-top: 0px;
-    margin-right: 3%;
-    max-width: 45%;
+    margin-right: 0%;
+    padding: 5% 15%;
+    margin-top: -100px;
+    max-width: 100%;
+  }
+  .la__image-div{
+    width: 50%;
   }
 
   .la__title {
-    /* visibility: hidden; */
-    margin-top: 0px;
-    text-align: center;
+    text-align: left;
     font-size: 2.5em;
+    margin-top: 50px;
   }
 
   .la__subtitle-desktop {
-    /* visibility: hidden; */
     font-size: 1.3em;
     text-align: left;
-    margin-top: 8%;
+    margin-top: 10%;
     margin-bottom:2%;
     color: rgb(210, 210, 126)
   }
@@ -192,7 +196,7 @@ export default {
     height: 80vh;
     z-index: 10;
     margin-bottom: 50%;
-    margin-top: 20%;
+    margin-top: 10%;
   }
 
   .la__logo-div {

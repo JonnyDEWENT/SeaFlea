@@ -4,6 +4,7 @@
       <h1 class="c__header">{{ title }}</h1>
       <div class="c__row-image col">
         <img class="c__image" src="../../assets/location.png" />
+        
         <h1 class="c__header-mobile">{{ title }}</h1>
       </div>
       <div>
@@ -170,7 +171,6 @@ export default {
   .c {
     margin-bottom: 20%;
     margin-top: 0%;
-    font-size: 1.4em;
   }
 
   .c__image {
@@ -190,7 +190,7 @@ export default {
   }
 
   .c__header-mobile {
-    margin-top: -8%;
+    margin-top: -5%;
     color: lightgray;
     font-size: 3em;
     text-align: right;
@@ -203,6 +203,23 @@ export default {
 
   .c__footer {
     padding: 2%;
+  }
+
+  .c__directions {
+    display: flex;
+    margin-bottom: 2%;
+    justify-content: center;
+  }
+
+  .c__email {
+    display: flex;
+    justify-content: center;
+  }
+
+  .c__call-link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
   }
 }
 

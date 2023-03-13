@@ -30,8 +30,8 @@ export default {
     title: "WHO WE ARE",
     footer: "The dedicated crew will work hard changing presentations and networking to make your trip one you won’t forget!",
     text: ["If you've got 'THE ITCH' to fish on Lake Michigan, then Sea Flea Fishing Charters has the cure. ",
-    "Here at Sea Flea Fishing Charters, it is our mission to provide an unforgettable experience for all our guests.",
-    "We want to be your go-to fishing charter. With access to Lake Michigan's world-class fishery, Sea Flea Fishing Charters offers the ultimate salmon and trout charter fishing experience for guest of all ages. Not only do we want to provide you the opportunity to catch a fish of a lifetime or catch your first fish, we want to build relationships for a lifetime. We want to get to know our guest and be apart of your unforgettable moments. Come have fun, enjoy the great outdoors and let us show you what makes Sea Flea Charters so unique among the charter fishing industry."],
+    "The value of a fishing experience is measured by the lasting memories it creates. Here at Sea Flea Charters, it’s our mission to provide you the best experience by creating memories you’ll never forget.",
+    "We want to be your go-to fishing charter. With access to Lake Michigan's world-class fishery, Sea Flea Charters offers the ultimate salmon and trout fishing experience. Not only do we want to provide you with the opportunity to catch the fish of a lifetime, we want to build a lasting relationship. We want to get to know you and be a part of your fondest fishing memories. Come have fun enjoying the great outdoors and let us show you what makes Sea Flea Charters the best salmon and trout fishing charter on Lake Michigan."],
     images:["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGYYXz2QYBWPsgQ1JAD15Wcz7Ub-nYYH66dg&usqp=CAU"],
   }),
 };
@@ -103,7 +103,7 @@ export default {
   .au{
     margin-bottom: 20%;
     margin-top: 0%;
-    font-size: 1.4em;
+    font-size: 1em;
   }
 
   .au__image{

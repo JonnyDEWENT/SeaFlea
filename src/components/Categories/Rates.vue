@@ -159,7 +159,7 @@ export default {
 @media (min-width: 500px) and (max-width: 1000px) {
   .r {
     margin-bottom: 20%;
-    font-size: 1.4em;
+    font-size: 1em;
   }
 
   .r__image {
@@ -182,7 +182,7 @@ export default {
   }
 
   .r__header-mobile {
-    margin-top: -8%;
+    margin-top: -5%;
     font-size: 3em;
     text-align: right;
     padding-right: 2%;
@@ -190,7 +190,7 @@ export default {
     position: relative;
     padding-right: 10%;
     color: lightgray;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
   }
   .r__header {
     display: none;

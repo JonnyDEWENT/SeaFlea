@@ -120,7 +120,7 @@ export default {
   .b {
     margin-bottom: 20%;
     margin-top: 20%;
-    font-size: 1.4em;
+    font-size: 1em;
   }
 
   .b__image {
@@ -143,7 +143,7 @@ export default {
   }
 
   .b__header-mobile{
-    margin-top: -8%;
+    margin-top: -5%;
     color: lightgray;
     font-size: 3em;
     text-align: right;

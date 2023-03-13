@@ -127,7 +127,7 @@ export default {
   .gi {
     margin-bottom: 20%;
     margin-top: 0%;
-    font-size: 1.4em;
+    font-size: 1em;
   }
 
   .gi__image {
@@ -149,7 +149,7 @@ export default {
   }
 
   .gi__header-mobile {
-    margin-top: -8%;
+    margin-top: -5%;
     color: lightgray;
     font-size: 3em;
     text-align: right;

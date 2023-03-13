@@ -104,16 +104,34 @@ export default {
 
   .tcr__header-mobile {
     font-size: 3em;
-    margin-right: 8%;
-    margin-bottom: -7%;
+    margin-top: -13%;
     z-index: 1000;
     position: relative;
     color: lightgray;
     text-align: right;
+    padding-right: 10%;
   }
 
   .tcr__header {
     display: none;
+  }
+
+  .tcr__head-image{
+  width: 100%;
+  padding: 8%;
+}
+
+.tcr__image-caption {
+    color: white;
+    font-size: 1.2em;
+    padding-left: 2%;
+    margin-top: -4.5%;
+    margin-bottom: 4%;
+    background-color:black;
+    z-index: 100;
+    position: relative;
+    width: 85vw;
+    margin-left: 7.5vw;
   }
 }
 

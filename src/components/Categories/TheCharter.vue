@@ -134,7 +134,7 @@ export default {
   .tc {
     margin-bottom: 20%;
     margin-top: 20%;
-    font-size: 1.4em;
+    font-size: 1em;
   }
 
   .tc__image {

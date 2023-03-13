@@ -70,12 +70,9 @@ export default {
 }
 
 @media (min-width: 1000px) {
-  .app {
-    /* background: url("./assets/rates-background.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
-  }
+
+}
+@media (max-width: 1000px) and (min-width: 500px)  {
+
 }
 </style>
